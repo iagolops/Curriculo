@@ -1,0 +1,192 @@
+\documentclass[%singlesided,
+               doublesided,
+               paper=a4,
+               fontsize=11pt
+              ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{4cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Carlito}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{blue}
+\colorlet{headerbarcolor}{cyan}
+
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{awesome-red}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{Iago Lopes}
+\tagline{Graduando em astronomia com forte interesse na área de ciência de dados. \\}
+\photo[round]{_MG_7749.jpg}{\dimexpr \headerheight-\marginbottom}   % make photo exactly match the header with margintop/marginright/marginbottom as margin
+
+\makeheader
+
+\highlightbar{
+
+    \section{Contato}
+    
+    \email{iagolops2012@gmail.com}
+    \phone{(31) 99766-6595}
+    \location{Rio de Janeiro, RJ}
+    \vspace{0.0em}
+    \github{@iagolops}{https://github.com/iagolops}
+    \linkedin{Iago Lopes}{https://www.linkedin.com/in/iago-lops/}
+    
+    \section{Habilidades}
+    
+    \skillsection{Programação}
+    \skill{Python}{3}
+    \skill{Java}{1}
+    \skill{LaTeX}{2}
+    %\skill{SQL}{5}
+    %\skill{Fortran}{3}
+    
+    \vspace{0.5em}
+    \skillsection{Sistemas Operacionais}
+    \skill{Linux}{2}
+    \skill{Windows}{3}
+    
+    \vspace{0.5em}
+    \skillsection{Software \& Ferramentas}
+    \skill{Visualização}{2}
+    (e.g. matplotlib, ...)\\
+    \skill{Análise de dados}{2}
+    (e.g. numpy, scipy, pandas, ...)\\
+    \skill{Machine Learning}{1}
+    (e.g. keras, ...)\\
+    
+    \vspace{0.5em}
+    \skillsection{Conhecimentos adicionais}
+    Estatística básica
+    
+    \vspace{0.5em}
+    \skillsection{Linguagens}
+    \skill{Inglês}{3}
+    \bigskip
+    
+    \section{Certificados}
+    \simpleskill{Coursera Supervised Machine Learning: Regression and Classification}
+    \simpleskill{Coursera Advanced Learning Algorithms}
+
+}
+\mainbar{
+    \section{Sobre mim}
+        Sou um graduando em astronomia pela UFRJ com pesquisa em machine learning aplicado à estimativa de redshifts. Tenho interesse nas áreas computacionais e de análise de dados. Sou uma pessoa focada e minha prioridade é desenvolver meu conhecimento e habilidades.Procuro minha primeira oportunidade no mercado de ciência de dados.
+    
+    \section[\faGears]{Histórico de trabalho}
+    \job{Jan 2023}
+        {ORGUEL Vespasiano-MG}
+        {Estagiário}
+        {Trabalhava como projetista e fazia projetos para fôrmas e andaimes utilizando o AutoCAD}
+    
+    \section[\faMortarBoard]{Formação}
+     %   \job{03/2026 - 12/2027}
+    %   $ {University of Oxford - UK}
+      %  {Mestrado em astronomia}
+      %  {}
+    
+        \job{04/2022}
+        {UFRJ Rio de Janeiro-RJ}
+        {Graduação em astronomia}
+        {}
+
+        \job{04/2019 - 02/2022}
+        {IFMG Santa Luzia-MG}
+        {Técnico em edificações}
+        {}
+
+    \section{Experiências}
+    %Pesquisa de graduação focada na estimativa de redshift analisando dados.\\
+    IC em cosmologia com machine learning.\\
+    IC concluída no Museu de Astronomia (MAST) sobre astronomia cultural.\\
+    Jogador de vôlei na base do Minas Tênis Clube em 2017.\\
+Curso de robótica e programação para crianças aos 11 anos de idade.\\
+    
+   % Pesquisa de mestrado focada em análise de dados usando o python.\\
+    %Membro da corporação LSST.\\
+
+
+    \vspace{0.5em}
+
+    \section{Habilidades Gerais}
+    \smallskip % additional skip because tag outlines use up space
+    \tag{Trabalho em equipe}
+    \tag{Liderança}
+    \tag{Organização}
+    \tag{Dedicação}
+    \tag{Facilidade de aprendizado}
+    
+    \vspace{0.5em}
+    
+    \section{dia-a-dia}
+    % This is taken from AltaCV
+    % see https://github.com/liantze/AltaCV for details
+    \wheelchart{1.5cm}{0.5cm}{% outer and inner diameter
+        8/8em/accent!20/Dormindo,          % comma-separated list of
+        9/8em/accent!90/Estudando,    % fraction of 24 / line length / color / label
+        2/8em/accent!60/Treinando,          % here, the color is shades of the accent color
+        2/8em/accent!50/Tempo livre,
+        3/8em/accent/Estudando outras áreas
+    }
+}
+\makebody
+\clearpage
+
+
+\pagestyle{highlightmain}
+
+% The highlightbar needs to be filled to display mainbar contents correctly in singlesised mode
+% For an empty highlightbar, fill with empty space
+\highlightbar{\hfill}
+\mainbar{
+
+    \section{Another section}
+    
+    This page uses the page style \texttt{highlightmain} which shows the highlight bar (gray) and the main part (white background) but omits the header. 
+    The default page style is \texttt{headerhighlightmain} with all three elements.
+    If you don't want header, nor highlight bar, use page style \texttt{\textbackslash pagestyle\{empty\}}.
+    \medskip
+    Neither main, nor highlight bar must be filled to make this template work.
+    It is possible to use a page style with the highlight bar but leave it empty by setting an empty highlightbar \texttt{\textbackslash highlightbar\{\}}.
+
+    \vspace{0.5em}
+    \subsection{Subsection 1}
+    Demonstrate subsections.
+    
+    \subsection{Subsection 2}
+    Subsection are also bold face but a smaller font then section. They also omit the rule.
+    
+
+}
+\end{document}
